@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/211205_experiment_scope_functions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220421_01_ReadingUserInputChallenge" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220421_02_oop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220421_03_SimpleCalculator" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220422_01_Person" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220502_01_BankAccount" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220508_01_constructors" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220508_02_WallArea" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220603_01_point_exercise" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220612_01_inheritence" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220709_01_inheritence" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220710_01_experiment_with_reference" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220710_02_experiment_passed_by_reference" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220712_01_main_args_experiment" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220713_01_inheritance_vehicle" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220714_01_inheritance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220719_01_composition" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220720_01_composition" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220801_01_encapsulation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/220802_01_encapsulation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DayOfTheWeekChallenge" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DigitSumChallenge" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DigitSumChallengeNoString" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ForStatement" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HelloWorld" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParsingValuesFromString" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ReadingUserInput" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ReadingUserInputChallenge" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Sum3and5Challenge" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Switch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/WhileStatement" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/WhileStatementChallenge" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/android_sudoku" isTestSource="false" packagePrefix="com.bracketcove.graphsudoku.domain" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

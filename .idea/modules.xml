@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/220801_01_amigoscode/220801_01_amigoscode.iml" filepath="$PROJECT_DIR$/220801_01_amigoscode/220801_01_amigoscode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/220817_01_polymorphism/220817_01_polymorphism.iml" filepath="$PROJECT_DIR$/220817_01_polymorphism/220817_01_polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellij_projects/FloatAndDouble/FloatAndDouble.iml" filepath="$PROJECT_DIR$/intellij_projects/FloatAndDouble/FloatAndDouble.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellij_projects/IfKeywordAndCodeBlocks/IfKeywordAndCodeBlocks.iml" filepath="$PROJECT_DIR$/intellij_projects/IfKeywordAndCodeBlocks/IfKeywordAndCodeBlocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellij_projects/JavaCourse/JavaCourse.iml" filepath="$PROJECT_DIR$/intellij_projects/JavaCourse/JavaCourse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellij_projects/KeywordsAndExpressions/KeywordsAndExpressions.iml" filepath="$PROJECT_DIR$/intellij_projects/KeywordsAndExpressions/KeywordsAndExpressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellij_projects/Operators/Operators.iml" filepath="$PROJECT_DIR$/intellij_projects/Operators/Operators.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellij_projects/Strings/Strings.iml" filepath="$PROJECT_DIR$/intellij_projects/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UdemyChallenges/UdemyChallenges.iml" filepath="$PROJECT_DIR$/UdemyChallenges/UdemyChallenges.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellij_projects/UdemyCourseExercises/UdemyCourseExercises.iml" filepath="$PROJECT_DIR$/intellij_projects/UdemyCourseExercises/UdemyCourseExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_study.iml" filepath="$PROJECT_DIR$/java_study.iml" />
+    </modules>
+  </component>
+</project>
