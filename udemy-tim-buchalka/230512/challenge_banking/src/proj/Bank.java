@@ -13,17 +13,32 @@ public class Bank {
         this.bankId = bankId;
     }
 
-    public void addNewBranch(String branchName, Integer branchId) {
+    public ArrayList<Branch> getBranches() {
+        return branches;
+    }
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public Integer getBankId() {
+        return bankId;
+    }
+
+    public void addNewBranch(String branchName, Integer branchId) throws BranchAlreadyExists {
         Branch branch = new Branch(branchName, branchId);
-        this.branches.add(branch);
+        if (isBranchNameOrIdAlreadyBeenUsed(branchName, branchId)){
+            throw new BranchAlreadyExists("The branch trying to be created already exists. Either name or id is already being used.");
+        }
+        branches.add(branch);
         String message = String.format("New branch added successfully. Name: %s; Id: %d; ", branch.getBranchName(), branch.getBranchId());
         System.out.println(message);
     }
 
     // TODO: if we don't annotate the function with `throws BranchNotFoundException` does the program works?
-    public void addNewBranch(Integer branchId, String name, Double initialTransactionAmount) throws BranchNotFoundException {
+    public void addNewCustomer(Integer branchId, String customerName, Double initialTransactionAmount) throws BranchNotFoundException {
         Branch branch = filterBranchById(branchId);
-        branch.addNewCustomer(name, initialTransactionAmount);
+        branch.addNewCustomer(customerName, initialTransactionAmount);
     }
 
     private Branch filterBranchById(Integer branchId) throws BranchNotFoundException {
@@ -34,6 +49,34 @@ public class Bank {
             }
         }
         throw new BranchNotFoundException("The branch with branchId=" + branchId + " could not be found.");
+    }
+
+    private Branch filterBranchByName(String branchName) throws BranchNotFoundException {
+        for (int i = 0; i < this.branches.size(); i++) {
+            Branch branch = this.branches.get(i);
+            if (branch.getBranchName () == branchName) {
+                return branch;
+            }
+        }
+        throw new BranchNotFoundException("The branch with branchName=" + branchName + " could not be found.");
+    }
+
+    private Boolean isBranchNameOrIdAlreadyBeenUsed(String branchName, Integer branchId){
+        try{
+            filterBranchById(branchId);
+            // this is autoboxing
+            return true;
+        } catch(BranchNotFoundException e){
+            try{
+                filterBranchByName(branchName);
+                // this is autoboxing
+                return true;
+            } catch(BranchNotFoundException e2){
+                // this is autoboxing
+                // because false is of type boolean, but the compiler knows to transform it into Boolean class
+                return false;
+            }
+        }
     }
 
 }
