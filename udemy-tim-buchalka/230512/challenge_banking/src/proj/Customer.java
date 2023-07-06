@@ -3,11 +3,12 @@ package proj;
 import java.util.ArrayList;
 
 public class Customer {
-    private ArrayList<Double> transactions;
     private Integer customerId;
     private String customerName;
 
-    public Customer(String name) {
+    private ArrayList<Double> transactions;
+
+    public Customer(Integer customerId, String name) {
         this.transactions = new ArrayList<>(); // create an empty ArrayList
         this.customerName = name;
     }
@@ -27,7 +28,6 @@ public class Customer {
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
-
 
     public void registerNewTransaction(Double transaction) {
         this.transactions.add(transaction);

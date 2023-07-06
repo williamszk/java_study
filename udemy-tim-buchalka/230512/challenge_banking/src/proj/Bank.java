@@ -25,10 +25,10 @@ public class Bank {
         return bankId;
     }
 
-    public void addNewBranch(String branchName, Integer branchId) throws BranchAlreadyExists {
+    public void addNewBranch(Integer branchId, String branchName) throws BranchAlreadyExists {
         Branch branch = new Branch(branchName, branchId);
         if (isBranchNameOrIdAlreadyBeenUsed(branchName, branchId)){
-            throw new BranchAlreadyExists("The branch trying to be created already exists. Either name or id is already being used.");
+            throw new BranchAlreadyExists("The branch trying to be created already exists. Either name or id are already being used.");
         }
         branches.add(branch);
         String message = String.format("New branch added successfully. Name: %s; Id: %d; ", branch.getBranchName(), branch.getBranchId());
@@ -36,9 +36,10 @@ public class Bank {
     }
 
     // TODO: if we don't annotate the function with `throws BranchNotFoundException` does the program works?
-    public void addNewCustomer(Integer branchId, String customerName, Double initialTransactionAmount) throws BranchNotFoundException {
+    // The IDE will show an error if we don't annotate with throws
+    public void addNewCustomer(Integer branchId, Integer customerId, String customerName, Double initialTransactionAmount) throws BranchNotFoundException, CustomerAlreadyExists {
         Branch branch = filterBranchById(branchId);
-        branch.addNewCustomer(customerName, initialTransactionAmount);
+        branch.addNewCustomer(customerId,customerName, initialTransactionAmount);
     }
 
     private Branch filterBranchById(Integer branchId) throws BranchNotFoundException {
