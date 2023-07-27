@@ -28,10 +28,10 @@ public class Main {
         SongManager.addNewSong(meteora, "In the end", 131);
         SongManager.addNewSong(meteora, "Somewhere I belong", 431);
 
-        // Linkin Park
+        // Foo Fighters
         Album inYourHonour = SongManager.addNewAlbum("In Your Honour");
-        SongManager.addNewSong(meteora, "Best of you", 188);
-        SongManager.addNewSong(meteora, "No way back", 188);
+        SongManager.addNewSong(inYourHonour, "Best of you", 188);
+        SongManager.addNewSong(inYourHonour, "No way back", 188);
         System.out.println("------------------------------------------------------------------------------");
 
         // Run UserInteractionPlaylist

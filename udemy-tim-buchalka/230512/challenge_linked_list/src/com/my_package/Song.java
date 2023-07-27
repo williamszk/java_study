@@ -8,4 +8,8 @@ public class Song {
         this.title = title;
         this.duration = duration;
     }
+
+    public String getTitle() {
+        return title;
+    }
 }

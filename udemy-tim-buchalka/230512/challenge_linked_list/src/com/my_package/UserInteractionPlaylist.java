@@ -1,5 +1,6 @@
 package com.my_package;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -21,24 +22,24 @@ public class UserInteractionPlaylist {
     // but later we can add more playlists
 
     /*
-    * This is where the user will give commands to the application this is only to be used in the CLI.
-    * */
-    public static void commandLineUserInterface(){
+     * This is where the user will give commands to the application this is only to be used in the CLI.
+     * */
+    public static void commandLineUserInterface() {
         // for now we'll use just one playlist for everything but later we can add the option to create more
         // playlists, later we can add commands to create, rename, delete a playlist
-        Playlist defaultPlaylist = new Playlist("Default Playlist");
-
+        // Playlist defaultPlaylist = new Playlist("Default Playlist");
+        Playlist defaultPlaylist = createDefaultPlaylist();
         // At the start we should list all commands
         listOptions();
         Scanner scanner = new Scanner(System.in);
         Boolean isRunning = true;
-        while (isRunning){
+        while (isRunning) {
             // quit:         q
             // list options: l
             //
             System.out.println("What is your command? Type here: ");
             String userCommand = scanner.next();
-            switch (userCommand){
+            switch (userCommand) {
                 case "q":
                     isRunning = false;
                     quitApp();
@@ -53,10 +54,16 @@ public class UserInteractionPlaylist {
         }
     }
 
-    public static void showAllSongsInPlaylist(Playlist defaultPlaylist){
+    public static void showAllSongsInPlaylist(Playlist defaultPlaylist) {
         System.out.println("List all songs in play list...");
 
         LinkedList<Song> linkedList = defaultPlaylist.getPlaylist();
+        Iterator<Song> iterator = linkedList.iterator();
+
+        while (iterator.hasNext()) {
+            Song song = iterator.next();
+            System.out.println("- '" + song.getTitle()+"'");
+        }
 
     }
 
@@ -75,7 +82,7 @@ public class UserInteractionPlaylist {
     public static void previousSong() {
     }
 
-    public static void listOptions(){
+    public static void listOptions() {
         System.out.println("+-----------------------------------------------------+");
         System.out.println("| Those are all possible commands that you can use:   |");
         System.out.println("| - 'h' : list all commands                           |");
@@ -86,6 +93,22 @@ public class UserInteractionPlaylist {
 
     public static void quitApp() {
         System.out.println("Quiting...");
+    }
+
+    private static Playlist createDefaultPlaylist(){
+
+        Album meteora = SongManager.addNewAlbum("Meteora");
+        SongManager.addNewSong(meteora, "Numb", 188);
+        SongManager.addNewSong(meteora, "Faint", 231);
+        SongManager.addNewSong(meteora, "In the end", 131);
+        SongManager.addNewSong(meteora, "Somewhere I belong", 431);
+
+        Playlist defaultPlaylist = new Playlist("Default Playlist");
+        // to add individual song
+        // defaultPlaylist.addSong(song);
+        defaultPlaylist.addWholeAlbum(meteora);
+
+        return defaultPlaylist;
     }
 
 }
