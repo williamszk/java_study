@@ -17,7 +17,10 @@ public class Main {
     // started tracking the direction we were going.
     // As an optional extra, provide an option to remove the current song from the playlist
     // (hint: listiterator.remove()
+
+    // TODO: we could try to build this application using C also.
     public static void main(String[] args) {
+        // Just creating some Songs
         // Linkin Park
         Album meteora = SongManager.addNewAlbum("Meteora");
         SongManager.addNewSong(meteora, "Numb", 188);
@@ -29,6 +32,10 @@ public class Main {
         Album inYourHonour = SongManager.addNewAlbum("In Your Honour");
         SongManager.addNewSong(meteora, "Best of you", 188);
         SongManager.addNewSong(meteora, "No way back", 188);
+        System.out.println("------------------------------------------------------------------------------");
+
+        // Run UserInteractionPlaylist
+        UserInteractionPlaylist.commandLineUserInterface();
     }
 
 
